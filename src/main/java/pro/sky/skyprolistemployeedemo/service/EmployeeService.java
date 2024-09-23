@@ -10,11 +10,14 @@ import java.util.List;
 
 public interface EmployeeService {
 
-    Employee add(String firstName, String lastName) throws EmployeeStorageIsFullException, EmployeeAlreadyAddedException;
+    Employee add(String firstName, String lastName)
+            throws EmployeeStorageIsFullException, EmployeeAlreadyAddedException;
 
-    Employee remove(String firstName, String lastName) throws EmployeeNotFoundException;
+    Employee remove(String firstName, String lastName)
+            throws EmployeeNotFoundException;
 
-    Employee find(String firstName, String lastName) throws EmployeeNotFoundException;
+    Employee find(String firstName, String lastName)
+            throws EmployeeNotFoundException;
 
     List<Employee> getAll();
 }
